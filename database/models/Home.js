@@ -2,6 +2,15 @@ const Sequelize = require('sequelize');
 const db = require('../index');
 
 module.exports = db.define('homes', {
+  home_id: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
+  home_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   dateOfPosting: {
     type: Sequelize.STRING,
     allowNull: false,
